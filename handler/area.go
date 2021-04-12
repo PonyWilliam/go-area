@@ -9,12 +9,25 @@ import (
 type Area struct{
 	AreaService service.IAreaServices
 }
-func(a *Area)CreateArea(ctx context.Context,req *area.Request_AreaInfo,response *area.ResponseMessage) error{
+func(a *Area)CreateArea(ctx context.Context,req *area.Request_Add_Area,response *area.ResponseMessage) error{
 	Area := &model.Area{
 		Name: req.Name,
 		Description: req.Description,
 	}
 	err := a.AreaService.AddArea(Area)
+	if err!=nil{
+		return err
+	}
+	response.Message = "success"
+	return nil
+}
+func(a *Area)UpdateArea(ctx context.Context,req *area.Request_Update_Area,response *area.ResponseMessage) error{
+	Area := &model.Area{
+		ID: req.Id,
+		Name: req.Name,
+		Description: req.Description,
+	}
+	err := a.AreaService.UpdateArea(Area)
 	if err!=nil{
 		return err
 	}

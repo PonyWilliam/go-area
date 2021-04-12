@@ -30,9 +30,9 @@ func main() {
 	)
 
 	srv := micro.NewService(
-		micro.Name("go.micro.service.product"),
+		micro.Name("go.micro.service.area"),
 		micro.Version("latest"),
-		micro.Address("127.0.0.1:8090"),
+		micro.Address("127.0.0.1:8091"),
 		micro.Registry(consulRegistry),
 	)
 	mysqlInfo := common.GetMysqlFromConsul(consulConfig,"mysql")

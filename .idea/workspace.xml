@@ -7,27 +7,30 @@
       <change afterPath="$PROJECT_DIR$/../ProductWeb/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../ProductWeb/.idea/workspace.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../ProductWeb/go.sum" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ProductWeb/handler/Area.go" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../ProductWeb/handler/MiddleWare.go" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../ProductWeb/handler/Product.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/area.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/model/area.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/repository/area.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/service/area.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/generate.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/handler/area.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugin.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proto/area.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../common/.idea/common.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../common/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../common/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../common/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../common/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../common/go.sum" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../common/jaeger.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../common/prometheus.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../common/zap.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../works/prometheus.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../works/run.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkWeb" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkWeb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/repository/area.go" beforeDir="false" afterPath="$PROJECT_DIR$/domain/repository/area.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/service/area.go" beforeDir="false" afterPath="$PROJECT_DIR$/domain/service/area.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handler/area.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler/area.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proto/area.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/proto/area.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proto/area.pb.micro.go" beforeDir="false" afterPath="$PROJECT_DIR$/proto/area.pb.micro.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proto/area.proto" beforeDir="false" afterPath="$PROJECT_DIR$/proto/area.proto" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../borrow/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../borrow/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../borrow/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../borrow/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../borrow/domain/model/product_log.go" beforeDir="false" afterPath="$PROJECT_DIR$/../borrow/domain/model/product_log.go" afterDir="false" />
@@ -62,6 +65,7 @@
       <change beforePath="$PROJECT_DIR$/../category/proto/category.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/../category/proto/category.pb.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../category/proto/category.pb.micro.go" beforeDir="false" afterPath="$PROJECT_DIR$/../category/proto/category.pb.micro.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../category/proto/category.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../category/proto/category.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../common/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/../common/config.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../product/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../product/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../product/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../product/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../product/domain/model/product.go" beforeDir="false" afterPath="$PROJECT_DIR$/../product/domain/model/product.go" afterDir="false" />
@@ -76,9 +80,12 @@
       <change beforePath="$PROJECT_DIR$/../workApi/handler/workApi.go" beforeDir="false" afterPath="$PROJECT_DIR$/../workApi/handler/workApi.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../workApi/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../workApi/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../works/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../works/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../works/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../works/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../works/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../works/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../works/domain/repository/work_repository.go" beforeDir="false" afterPath="$PROJECT_DIR$/../works/domain/repository/work_repository.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../works/domain/server/work_server.go" beforeDir="false" afterPath="$PROJECT_DIR$/../works/domain/server/work_server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../works/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../works/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/../works/go.sum" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../works/handler/works.go" beforeDir="false" afterPath="$PROJECT_DIR$/../works/handler/works.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../works/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../works/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../works/proto/works.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/../works/proto/works.pb.go" afterDir="false" />
@@ -113,6 +120,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -121,6 +129,22 @@
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager">
+    <configuration name="go build github.com/PonyWilliam/go-area" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="area" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/main.go" />
+      <package value="github.com/PonyWilliam/go-area" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build github.com/PonyWilliam/go-area" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,6 +160,10 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>

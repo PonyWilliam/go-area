@@ -7,6 +7,7 @@ import (
 
 type IAreaServices interface {
 	AddArea(area *model.Area)error
+	UpdateArea(area *model.Area)error
 	DelAreaByID(id int64)error
 	FindAllArea() ([]model.Area,error)
 }
@@ -19,10 +20,12 @@ type AreaServices struct{
 func(a *AreaServices)AddArea(area *model.Area)error{
 	return a.areaRepository.AddArea(area)
 }
+func(a *AreaServices)UpdateArea(area *model.Area)error{
+	return a.areaRepository.UpdateArea(area)
+}
 func(a *AreaServices)DelAreaByID(id int64)error{
 	return a.areaRepository.DelAreaByID(id)
 }
 func(a *AreaServices)FindAllArea()([]model.Area,error){
 	return a.areaRepository.FindAllArea()
 }
-

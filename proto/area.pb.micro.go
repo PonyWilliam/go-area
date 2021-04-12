@@ -42,7 +42,8 @@ func NewAreaEndpoints() []*api.Endpoint {
 // Client API for Area service
 
 type AreaService interface {
-	CreateArea(ctx context.Context, in *Request_AreaInfo, opts ...client.CallOption) (*ResponseMessage, error)
+	CreateArea(ctx context.Context, in *Request_Add_Area, opts ...client.CallOption) (*ResponseMessage, error)
+	UpdateArea(ctx context.Context, in *Request_Update_Area, opts ...client.CallOption) (*ResponseMessage, error)
 	DelArea(ctx context.Context, in *Request_AreaID, opts ...client.CallOption) (*ResponseMessage, error)
 	FindAll(ctx context.Context, in *Request_NULL, opts ...client.CallOption) (*Response_AreaInfos, error)
 }
@@ -59,8 +60,18 @@ func NewAreaService(name string, c client.Client) AreaService {
 	}
 }
 
-func (c *areaService) CreateArea(ctx context.Context, in *Request_AreaInfo, opts ...client.CallOption) (*ResponseMessage, error) {
+func (c *areaService) CreateArea(ctx context.Context, in *Request_Add_Area, opts ...client.CallOption) (*ResponseMessage, error) {
 	req := c.c.NewRequest(c.name, "Area.CreateArea", in)
+	out := new(ResponseMessage)
+	err := c.c.Call(ctx, req, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *areaService) UpdateArea(ctx context.Context, in *Request_Update_Area, opts ...client.CallOption) (*ResponseMessage, error) {
+	req := c.c.NewRequest(c.name, "Area.UpdateArea", in)
 	out := new(ResponseMessage)
 	err := c.c.Call(ctx, req, out, opts...)
 	if err != nil {
@@ -92,14 +103,16 @@ func (c *areaService) FindAll(ctx context.Context, in *Request_NULL, opts ...cli
 // Server API for Area service
 
 type AreaHandler interface {
-	CreateArea(context.Context, *Request_AreaInfo, *ResponseMessage) error
+	CreateArea(context.Context, *Request_Add_Area, *ResponseMessage) error
+	UpdateArea(context.Context, *Request_Update_Area, *ResponseMessage) error
 	DelArea(context.Context, *Request_AreaID, *ResponseMessage) error
 	FindAll(context.Context, *Request_NULL, *Response_AreaInfos) error
 }
 
 func RegisterAreaHandler(s server.Server, hdlr AreaHandler, opts ...server.HandlerOption) error {
 	type area interface {
-		CreateArea(ctx context.Context, in *Request_AreaInfo, out *ResponseMessage) error
+		CreateArea(ctx context.Context, in *Request_Add_Area, out *ResponseMessage) error
+		UpdateArea(ctx context.Context, in *Request_Update_Area, out *ResponseMessage) error
 		DelArea(ctx context.Context, in *Request_AreaID, out *ResponseMessage) error
 		FindAll(ctx context.Context, in *Request_NULL, out *Response_AreaInfos) error
 	}
@@ -114,8 +127,12 @@ type areaHandler struct {
 	AreaHandler
 }
 
-func (h *areaHandler) CreateArea(ctx context.Context, in *Request_AreaInfo, out *ResponseMessage) error {
+func (h *areaHandler) CreateArea(ctx context.Context, in *Request_Add_Area, out *ResponseMessage) error {
 	return h.AreaHandler.CreateArea(ctx, in, out)
+}
+
+func (h *areaHandler) UpdateArea(ctx context.Context, in *Request_Update_Area, out *ResponseMessage) error {
+	return h.AreaHandler.UpdateArea(ctx, in, out)
 }
 
 func (h *areaHandler) DelArea(ctx context.Context, in *Request_AreaID, out *ResponseMessage) error {

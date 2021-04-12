@@ -5,7 +5,8 @@ package area;
 option go_package = "proto;area";
 
 service Area{
-  rpc CreateArea(Request_AreaInfo)returns(Response_message);
+  rpc CreateArea(Request_Add_Area)returns(Response_message);
+  rpc UpdateArea(Request_Update_Area)returns(Response_message);
   rpc DelArea(Request_AreaID)returns(Response_message);
   rpc FindAll(Request_NULL)returns(Response_AreaInfos);
 }
@@ -13,9 +14,14 @@ message Request_NULL{}
 message Request_AreaID{
   int64 id = 1;
 }
-message Request_AreaInfo{
+message Request_Add_Area{
   string name = 1;
   string description = 2;
+}
+message Request_Update_Area{
+  int64 id = 1;
+  string name = 2;
+  string description = 3;
 }
 message Response_AreaInfo{
   int64 id = 1;
