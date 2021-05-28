@@ -20,7 +20,7 @@ type AreaRepository struct{
 }
 func(a *AreaRepository) InitTable() error{
 	if(a.mysql.HasTable(&model.Area{})){
-		a.mysql.DropTable(&model.Area{})
+		return nil
 	}
 	return a.mysql.CreateTable(&model.Area{}).Error
 }

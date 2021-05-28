@@ -17,6 +17,7 @@ build:
 test:
 	go test -v ./... -cover
 
-.PHONY: docker
 docker:
-	docker build . -t product:latest
+	docker build -t ponywilliam/go-area .
+	docker tag ponywilliam/go-area ponywilliam/go-area
+	docker push ponywilliam/go-area
